@@ -1,0 +1,56 @@
+#canvas-wrapper
+	canvas#canvas
+
+.content-fluid
+	.row
+		accordion.col-md-3
+			.card
+				.card-header
+					button.btn.btn-link.mb-0.collapsed(
+						type="button"
+						data-toggle="collapse"
+						data-target="#collapseFigures"
+						aria-expanded="true"
+						aria-controls="collapseProperties")
+						| Фигуры
+
+				#collapseFigures.collapse
+					.card-body
+						button.btn.btn-link.js-button-figure(
+							type="button"
+							data-obj="Circle"
+							data-prop="{'radius':20}"
+						)
+							| Круг
+						button.btn.btn-link.js-button-figure(
+							type="button"
+							data-obj="Ellipse"
+							data-prop="{'rx':20,'ry':30}"
+						)
+							| Елипс
+
+		accordion.col-md-3.offset-md-6
+			.card
+				.card-header
+					button.btn.btn-link.mb-0.collapsed(
+						type="button"
+						data-toggle="collapse"
+						data-target="#collapseProperties"
+						aria-expanded="true"
+						aria-controls="collapseProperties")
+						| Свойства
+
+				#collapseProperties.collapse
+					.card-body test
+
+				.card-header
+					button.btn.btn-link.mb-0.collapsed(
+						type="button"
+						data-toggle="collapse"
+						data-target="#collapseObjsTree"
+						aria-expanded="true"
+						aria-controls="collapseObjsTree")
+						| Дерево обьектов
+
+				#collapseObjsTree.collapse
+					.card-body.treeview
