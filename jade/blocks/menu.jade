@@ -9,13 +9,32 @@
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false")
-					| File
+					| Файл
 				.dropdown-menu(aria-labelledby="navbarDropdown")
-					a.dropdown-item(href="#") Open
-					a.dropdown-item(href="#") Save
+					a.dropdown-item(href="#") Открыть
+					a.dropdown-item(href="#") Сохранить
 					.dropdown-divider
 					a.dropdown-item(href="#" data-toggle="modal" data-target="#aboutModal")
-						| About
+						| О программе
+
+			li.nav-item.dropdown
+				a.nav-link.dropdown-toggle#navbarDropdown(
+					href="#"
+					role="button"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false")
+					| Добавить
+				.dropdown-menu(aria-labelledby="navbarDropdown")
+					a.dropdown-item.js-button-figure(
+						data-obj="Circle"
+						data-prop="{'radius':20}")
+						| Круг
+					a.dropdown-item.js-button-figure(
+						data-obj="Ellipse"
+						data-prop="{'rx':20,'ry':30}")
+						| Елипс
+					
 
 #aboutModal.modal.fade(
 	tabindex="-1"
