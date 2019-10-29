@@ -1,0 +1,35 @@
+
+.navbar.navbar-expand-lg.navbar-light.bg-light
+	.collapse.navbar-collapse
+		ul.navbar-nav
+			li.nav-item.dropdown
+				a.nav-link.dropdown-toggle#navbarDropdown(
+					href="#"
+					role="button"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false")
+					| File
+				.dropdown-menu(aria-labelledby="navbarDropdown")
+					a.dropdown-item(href="#") Open
+					a.dropdown-item(href="#") Save
+					.dropdown-divider
+					a.dropdown-item(href="#" data-toggle="modal" data-target="#aboutModal")
+						| About
+
+#aboutModal.modal.fade(
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="aboutModalLabel"
+	aria-hidden="true")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content
+			.modal-header
+				h5.modal-title#aboutModalLabel О программе
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true") &times;
+			.modal-body
+				p Программа создания и редактировния двухмерной анимации для JS Canvas.
+				p Автор: Святоха Артём.
+			.modal-footer
+				button.btn.btn-primary(type="button" data-dismiss="modal") Закрыть
