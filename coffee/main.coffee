@@ -1,14 +1,7 @@
+import { initSelection } from './select'
 
 $(document).ready ->
 	canvas = new fabric.Canvas 'canvas'
-	rect = new fabric.Rect
-		left: 100
-		top: 100
-		fill: 'red'
-		width: 20
-		height: 20
-
-	canvas.add rect
 
 	resize = ->
 		canvas.setWidth $(window).width()
@@ -50,3 +43,10 @@ $(document).ready ->
 		obj = eval codemirror.getValue()
 		canvas.add obj
 		obj.center()
+
+	initSelection(canvas)
+
+	render = (delta) ->
+		canvas.renderAll()
+		window.requestAnimationFrame render
+	render(0)
