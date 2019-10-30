@@ -38,3 +38,15 @@ $(document).ready ->
 		data: data
 		autoOpen: true
 		dragAndDrop: true
+
+	codemirror = CodeMirror.fromTextArea(document.getElementById('codearea'),
+		extraKeys:
+			'Ctrl-Space': 'autocomplete'
+		mode:
+			name: 'javascript'
+			globalVars: true)
+
+	$('.js-code-excec-btn').click ->
+		obj = eval codemirror.getValue()
+		canvas.add obj
+		obj.center()

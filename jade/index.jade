@@ -3,12 +3,14 @@ extends blocks/layout-default
 block head
 	title Animation Editor
 	meta(charset='utf-8')
+	meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
 	link(rel='stylesheet' href='css/bootstrap.min.css')
 	link(rel='stylesheet' href='css/bootstrap-grid.min.css')
 	link(rel='stylesheet' href='css/bootstrap-reboot.min.css')
 	link(rel='stylesheet' href='css/bootstrap-reboot.min.css')
 	link(rel='stylesheet' href='css/jqtree.css')
+	link(rel='stylesheet' href='css/codemirror.css')
 	link(rel='stylesheet' href='css/main.css')
 
 block content
@@ -19,4 +21,6 @@ block content
 	script(src='js/bootstrap.min.js')
 	script(src='js/tree.jquery.js')
 	script(src='js/fabric.min.js')
+	script(src='js/codemirror.js')
+	script(src='js/mode/javascript.js')
 	script(src='js/main.js')

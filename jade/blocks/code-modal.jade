@@ -1,0 +1,33 @@
+#codeModal.modal.fade(
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="codeModalLabel"
+	aria-hidden="true")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content
+			.modal-header
+				h5.modal-title#codeModalLabel Вставка кода
+				button.close(type="button" data-dismiss="modal" aria-label="Close")
+					span(aria-hidden="true") &times;
+			.modal-body
+				textarea#codearea.form-control(rows="15").js-code-text.
+					var circle = new fabric.Circle({
+						left: 100,
+						top: 100,
+						radius: 50
+					});
+					
+					circle.setGradient('fill', {
+						x1: 0,
+						y1: 0,
+						x2: 0,
+						y2: circle.height,
+						colorStops: {
+							0: '#000',
+							1: '#fff'
+						}
+					});
+					circle;
+			.modal-footer
+				button.btn.btn-secondary(type="button" data-dismiss="modal") Закрыть
+				button.btn.btn-primary.js-code-excec-btn(type="button" data-dismiss="modal") Выполнить код

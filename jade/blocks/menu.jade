@@ -1,7 +1,17 @@
 
-.navbar.navbar-expand-lg.navbar-light.bg-light
-	.collapse.navbar-collapse
-		ul.navbar-nav
+.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light
+	button.navbar-toggler(
+		type="button"
+		data-toggle="collapse"
+		data-target="#navbarToggler"
+		aria-controls="navbarToggler"
+		aria-expanded="false"
+		aria-label="Toggle navigation")
+		span.navbar-toggler-icon
+	a.navbar-brand(href="#") AnimEditorJS
+
+	#navbarToggler.collapse.navbar-collapse
+		ul.navbar-nav.mr-auto.mt-2.mt-lg-0
 			li.nav-item.dropdown
 				a.nav-link.dropdown-toggle#navbarDropdown(
 					href="#"
@@ -24,17 +34,26 @@
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false")
+					| Вид
+				.dropdown-menu(aria-labelledby="navbarDropdown")
+					a.dropdown-item(
+						data-toggle="collapse"
+						href="#panelProperties"
+						role="button"
+						aria-expanded="false"
+						aria-controls="panelProperties")
+						| Панель инструментов
+
+			li.nav-item.dropdown
+				a.nav-link.dropdown-toggle#navbarDropdown(
+					href="#"
+					role="button"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false")
 					| Добавить
 				.dropdown-menu(aria-labelledby="navbarDropdown")
-					a.dropdown-item.js-button-figure(
-						data-obj="Circle"
-						data-prop="{'radius':20}")
-						| Круг
-					a.dropdown-item.js-button-figure(
-						data-obj="Ellipse"
-						data-prop="{'rx':20,'ry':30}")
-						| Елипс
-					
+					include figures
 
 #aboutModal.modal.fade(
 	tabindex="-1"
@@ -52,3 +71,5 @@
 				p Автор: Святоха Артём.
 			.modal-footer
 				button.btn.btn-primary(type="button" data-dismiss="modal") Закрыть
+
+include code-modal
